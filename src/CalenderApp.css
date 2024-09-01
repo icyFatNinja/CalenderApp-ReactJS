@@ -128,6 +128,7 @@
   justify-content: center;
   align-items: center;
   row-gap: 2rem;
+  display: none;
 }
 
 .time-input {
@@ -148,11 +149,6 @@
   letter-spacing: 0.1rem;
 }
 
-.time-input input[type="number"]::-webkit-outer-spin-button,
-.time-input input[type="number"]::-webkit-inner-spin-button {
-  appearance: none;
-}
-
 .time-input input {
   background-color: transparent;
   border: none;
@@ -163,6 +159,66 @@
   height: 4rem;
   text-align: center;
   font-size: clamp(1.2rem, 1.2c i, 1.6rem);
+}
+
+.time-input input[type="number"]::-webkit-outer-spin-button,
+.time-input input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.event-popup textarea {
+  width: clamp(15rem, 15cqi, 25rem);
+  aspect-ratio: 5 / 2;
+  resize: none;
+  background-color: #0f1319;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #78879e;
+  transition: border 0.1s;
+}
+
+.event-popup textarea:focus {
+  border: 0.1rem solid #00a3ff;
+}
+
+.event-popup textare::placeholder {
+  font-size: clamp(1rem, 0.8cqi, 1.2rem);
+  color: #78879e;
+}
+
+.event-popup textarea:focus::placeholder {
+  color: transparent;
+}
+
+.event-popup-btn {
+  width: clamp(15rem, 15cqi, 25rem);
+  height: 4rem;
+  background-color: #ef9011;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.5rem, 1.5cqi, 2.2rem);
+  letter-spacing: 0.05rem;
+  border: none;
+  box-shadow: 0 0 1.5rem 1rem rgba(239, 144, 17, 0.2);
+  cursor: pointer;
+}
+
+.event-popup-btn:active {
+  transform: translate(0.1rem);
+}
+
+.close-event-popup {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-event-popup i {
+  font-size: 2.5rem;
+  color: #fff;
 }
 
 .event {
